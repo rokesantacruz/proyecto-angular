@@ -1,0 +1,55 @@
+<div class="btn-gestion">
+    <button routerLink="/admin/vuelos">
+      Gestionar vuelos
+    </button>
+</div>
+
+<div class="container">
+
+  <h1>Crear vuelo</h1>
+
+  <form (ngSubmit)="crearVuelo()">
+
+    <label>Origen</label>
+    <input
+      type="text"
+      [(ngModel)]="vuelo.origen"
+      name="origen"
+      required>
+
+    <label>Destino</label>
+    <input
+      type="text"
+      [(ngModel)]="vuelo.destino"
+      name="destino"
+      required>
+
+    <label>Aerolínea</label>
+    <input
+      type="text"
+      [(ngModel)]="vuelo.aerolinea"
+      name="aerolinea"
+      required>
+
+    <label>Hora de salida</label>
+    <input
+      type="datetime-local"
+      [(ngModel)]="vuelo.hora_salida"
+      name="hora_salida"
+      required>
+
+    <label>Hora de llegada</label>
+    <input
+      type="datetime-local"
+      [(ngModel)]="vuelo.hora_llegada"
+      name="hora_llegada"
+      required>
+
+    <button type="submit">
+          Crear vuelo
+    </button>
+  </form>
+
+</div>
+
+

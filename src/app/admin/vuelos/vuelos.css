@@ -1,0 +1,194 @@
+.container {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+
+.titulo {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+
+/* EL GRID DE LAS TARJETAS */
+.container {
+
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:15px;
+
+}
+
+
+/* El título y botón ocupan todo el ancho */
+.titulo {
+  grid-column: 1 / -1;
+}
+
+
+/* Cada vuelo es una tarjeta */
+.vuelo-card {
+
+  background:white;
+
+  padding:15px;
+
+  border-radius:10px;
+
+  box-shadow:0 3px 10px rgba(0,0,0,.15);
+
+  border-left:4px solid #2563eb;
+
+  min-height:130px;
+
+}
+
+
+.vuelo-card h2 {
+
+  font-size:16px;
+  margin:0 0 8px;
+  color:#2563eb;
+
+}
+
+
+.ruta {
+
+  font-size:14px;
+  font-weight:bold;
+
+}
+
+
+.vuelo-card p {
+
+  font-size:13px;
+  margin:5px 0;
+
+}
+
+
+/* botones dentro de la tarjeta */
+
+.acciones {
+
+  display:flex;
+  gap:10px;
+  margin-top:12px;
+
+}
+
+.btn-crear {
+  margin-top: 30px;
+  padding: 14px 28px;
+
+  background: #2563eb;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-editar {
+
+  background:#2563eb;
+
+  color:white;
+
+  border:none;
+
+  padding:7px 14px;
+
+  border-radius:6px;
+
+  cursor:pointer;
+
+  font-size:12px;
+
+}
+
+button {
+  margin-top: 25px;
+  width: auto;
+
+  padding: 12px;
+
+  background: #2563eb;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.btn-editar:hover {
+
+  background:#1d4ed8;
+
+}
+
+
+
+.btn-eliminar {
+
+  background:#dc2626;
+
+  color:white;
+
+  border:none;
+
+  padding:7px 14px;
+
+  border-radius:6px;
+
+  cursor:pointer;
+
+  font-size:12px;
+
+}
+
+
+.btn-eliminar:hover {
+
+  background:#991b1b;
+
+}
+
+
+/* Ajuste responsive */
+@media(max-width:900px){
+
+  .container {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+
+@media(max-width:600px){
+
+  .container {
+    grid-template-columns:1fr;
+  }
+
+}

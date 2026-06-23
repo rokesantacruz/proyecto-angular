@@ -1,0 +1,60 @@
+.dashboard-container {
+  padding: 40px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #1f2937;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+/* Tarjetas de estadísticas */
+div {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 20px;
+  width: 250px;
+  display: inline-block;
+  margin-right: 20px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+h3 {
+  color: #6b7280;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 42px;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 0;
+}
+
+
+/* Botón */
+button {
+  margin-top: 30px;
+  padding: 14px 28px;
+
+  background: #2563eb;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}

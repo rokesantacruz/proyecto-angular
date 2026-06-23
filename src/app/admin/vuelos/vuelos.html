@@ -1,0 +1,83 @@
+
+<div class="container">
+
+  <div class="titulo">
+
+    <h1>Vuelos</h1>
+
+    <a
+      routerLink="/admin/crear-vuelo"
+      class="btn-crear">
+      + Crear vuelo
+    </a>
+
+    <button type="button" (click)="irAlPanel()">
+      Panel de Administración
+    </button>
+
+  </div>
+
+
+  <div *ngFor="let vuelo of vuelos"
+       class="vuelo-card">
+
+
+    <h2>
+      Vuelo {{ vuelo.id }}
+    </h2>
+
+
+    <p class="ruta">
+
+      {{ vuelo.origen }}
+      →
+      {{ vuelo.destino }}
+
+    </p>
+
+
+    <p>
+
+      Salida:
+      {{ vuelo.hora_salida }}
+
+    </p>
+
+
+    <p>
+
+      Llegada:
+      {{ vuelo.hora_llegada }}
+
+    </p>
+
+
+    <div class="acciones">
+
+  <button
+    class="btn-editar"
+    (click)="editar(vuelo.id)">
+    Editar
+  </button>
+
+
+  <button
+    class="btn-eliminar"
+    (click)="eliminar(vuelo.id)">
+    Eliminar
+  </button>
+
+</div>
+
+
+  </div>
+
+
+ <p *ngIf="!vuelos || vuelos.length === 0">
+
+    No hay vuelos registrados
+
+  </p>
+
+
+</div>

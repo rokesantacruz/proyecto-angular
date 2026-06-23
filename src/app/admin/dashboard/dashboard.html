@@ -1,0 +1,28 @@
+
+<h1>Panel de Administración</h1>
+
+<div>
+  <h3>Total usuarios</h3>
+  <p>{{ totalUsuarios }}</p>
+</div>
+
+<div>
+  <h3>Total vuelos</h3>
+  <p>{{ totalVuelos }}</p>
+</div>
+
+<div>
+  <h3>Total reservas</h3>
+  <p>{{ totalReservas }}</p>
+</div>
+
+<div class="btn-gestion">
+<button routerLink="/admin/vuelos">
+  Gestionar vuelos
+</button>
+
+<button (click)="salirLogin()">
+  Cerrar Sesión
+</button>
+</div>
+

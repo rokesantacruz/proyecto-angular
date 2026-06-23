@@ -1,0 +1,14 @@
+<h2>Vuelos disponibles</h2>
+
+<div *ngFor="let vuelo of vuelos">
+  <h3>{{ vuelo.origen }} → {{ vuelo.destino }}</h3>
+
+  <p>Fecha: {{ vuelo.fecha }}</p>
+  <p>Precio: {{ vuelo.precio }} €</p>
+
+  <button (click)="reservarVuelo(vuelo.id)">
+    Reservar
+  </button>
+
+  <hr>
+</div>

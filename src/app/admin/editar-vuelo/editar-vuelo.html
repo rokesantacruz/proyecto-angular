@@ -1,0 +1,72 @@
+<div class="btn-gestion">
+  <button 
+    type="button"
+    (click)="irVuelos()">
+    Gestionar vuelos
+  </button>
+</div>
+
+
+<div class="container">
+
+
+<h1>Editar vuelo</h1>
+
+
+<form (ngSubmit)="guardar()">
+
+
+
+<label>Origen</label>
+
+<input
+type="text"
+[(ngModel)]="vuelo.origen"
+name="origen">
+
+
+
+<label>Destino</label>
+
+<input
+type="text"
+[(ngModel)]="vuelo.destino"
+name="destino">
+
+
+
+<label>Aerolínea</label>
+
+<input
+type="text"
+[(ngModel)]="vuelo.aerolinea"
+name="aerolinea">
+
+
+
+<label>Hora de salida</label>
+
+<input
+type="datetime-local"
+[(ngModel)]="vuelo.hora_salida"
+name="hora_salida">
+
+
+
+<label>Hora de llegada</label>
+
+<input
+type="datetime-local"
+[(ngModel)]="vuelo.hora_llegada"
+name="hora_llegada">
+
+
+
+<button type="submit">
+Guardar cambios
+</button>
+
+</form>
+
+
+</div>
